@@ -1,0 +1,27 @@
+<div class="container col-lg-12" ng-controller="ProductsController"> 
+
+  <h2>Hola, tengo productos</h2>
+
+  <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in products">
+                    <td>{{ product.name}}</td>
+                    <td>{{ product.price}}</td>
+                </tr>
+            </tbody>
+    </table>
+
+    <span>Name</span>
+    <input type="text" ng-model="newpromotion.name">
+    <br>
+    <span>Price</span>
+    <input type="text" ng-model="newpromotion.price">
+    <button ng-click="add()">Add new Promotion</button>
+
+</div>
