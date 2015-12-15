@@ -1,0 +1,50 @@
+<div class="container col-lg-12" ng-controller="AppointmentDetailController">  
+
+    <div class="container col-lg-12">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                    <th>reminder_first</th>
+                    <th>reminder_second</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ detailAppointment.date | date:'medium'}}</td>
+                    <td>{{ detailAppointment.type}}</td>
+                    <td>{{ detailAppointment.status}}</td>
+                    <td>{{ detailAppointment.reminder_first}}</td>
+                    <td>{{ detailAppointment.reminder_second }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container col-lg-12">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Confirmed</th>
+                    <th>json_data</th>
+                    <th>Date Entered</th>
+                    <th>Date Modified</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ detailAppointment.confirmed}}</td>
+                    <td>{{ detailAppointment.json-data }}</td>
+                    <td>{{ detailAppointment.date_entered }}</td>
+                    <td>{{ detailAppointment.date_modified }}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button ng-click="back()" class="btn btn-primary btn-lg col-md-6 col-md-offset-3">BACK</button>
+
+</div>

@@ -1,0 +1,35 @@
+s<div class="container col-lg-12" ng-controller="UserDetailController">  
+
+    <div class="container col-lg-12 text-center">
+        <h2>{{ idUsers[0][0].name }}</h2> 
+        <h2>{{ idUsers[0][0].lastname }}</h2>
+    </div>
+
+    <div class="pull-right">
+        <a class="btn btn-success " href="#/editUser" >Edit</a>
+    </div>   
+
+    <div class="container">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Photo</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="{{ idUsers[0][0].photo }}"></td>
+                    <td>{{ idUsers[0][0].country}}</td>
+                    <td>{{ idUsers[0][0].city }}</td>
+                    <td>{{ idUsers[0][0].state}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a href="http://localhost/consultorio/index.html?#/home" class="btn btn-primary btn-lg col-md-6 col-md-offset-3">BACK</a>
+
+</div>

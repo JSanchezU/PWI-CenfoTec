@@ -1,0 +1,123 @@
+<div class="container col-lg-12" >  
+
+    <div class="container col-lg-12">
+        
+        <h2>Sign Up</h2>
+        <br>
+         <form class="form-horizontal well bs-component col-lg-6" role="form" id="form-user" ng-controller="NewUserController">
+
+        <fieldset>
+<!-- Inicio Email -->
+            <div class="form-group">
+                <label for="input-email" class="col-lg-3 control-label">Email</label>
+                <div class="col-lg-9">
+                  <input type="email" class="form-control" ng-model="user.email" id="input-email" placeholder="your.name@gmail.com" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin Email -->
+
+<!-- Inicio Password -->
+            <div class="form-group">
+                <label for="input-password" class="col-lg-3 control-label">Password</label>
+                <div class="col-lg-9">
+                  <input type="password" class="form-control" ng-model="user.password" id="input-password" placeholder="Password" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Please set a password.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div> 
+<!-- Fin Password -->   
+
+<!-- Inicio firstname -->
+            <div class="form-group">
+                <label for="input-name" class="col-lg-3 control-label">First Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="user.firstname" id="input-name" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your First Name.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin firstname -->
+
+<!-- Inicio lastname -->
+            <div class="form-group">
+                <label for="input-lastName" class="col-lg-3 control-label"> Last Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="user.lastname" id="input-lastName" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin lastname -->
+
+<!-- Inicio surname2 -->
+            <div class="form-group">
+                <label for="input-surName" class="col-lg-3 control-label">Sur Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="user.surname2" id="input-surName" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin surname2 -->
+
+<!-- Inicio account name -->
+            <div class="form-group">
+                <label for="input-accountName" class="col-lg-3 control-label">Account Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="user.account_name" id="input-accountName" required>
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin account name -->
+
+<!-- Inicio account type -->
+            <div class="form-group">
+                <label for="select-type" class="col-lg-3 control-label">Account Type</label>
+                <div class="col-lg-9">
+                  <select ng-options="listTypeUser.value as listTypeUser.name for listTypeUser in listTypeUsers | filter:query.value" ng-model="user.account_type" class="form-control">
+                        <option value="" name="---Account Type---">---Account Type---</option>
+                  </select> 
+                  <br />
+                  <div ng-show="form.$submitted || form.uEmail.$touched">
+                    <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
+                    <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
+                  </div>
+                </div>
+            </div>
+<!-- Fin account type -->
+            
+          <hr>
+
+          <div class="form-group">
+            <div class="col-lg-6 col-lg-offset-6">
+              <button class="btn btn-primary col-lg-5 col-lg-offset-1" ng-click="saveUser(user)" type="submit" id="submit-persona">Crear</button>
+              <a class="btn btn-default col-lg-5 col-lg-offset-1" href="http://localhost/consultorio/index.html#/login" id="cancel-persona">Cancelar</a>
+            </div>
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+
+</div>

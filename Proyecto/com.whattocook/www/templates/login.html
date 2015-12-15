@@ -1,0 +1,34 @@
+<ion-view view-title="Login" id="login">
+
+    <ion-content>
+        <br>
+        <center><img src="../img/miniLogo.png"></center>
+        <br>
+        <div class="card">
+            <form>
+                <div class="list">
+                    <label class="item item-input">
+                        <span class="input-label">Usuario</span>
+                        <input type="text" ng-model="user.username" required>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Contraseña</span>
+                        <input type="password" ng-model="user.password" required>
+                    </label>
+                </div>
+            </form>
+            <center>
+                <label class="item">
+                        <button class="button button-block button-calm" type="submit" ng-click="loginFun()"> <i class="icon ion-log-in"></i> LOGIN </button>
+                    </label>
+            </center>
+            
+            <div class="row">
+	        	<div class="col col-25"></div>
+	        	<div class="col col-50"><hr></div>
+			 	<div class="col col-25"></div>
+			</div>
+            <a class="facebook-sign-in button button-block button-positive" ng-click="facebookLogin()" >Login with Facebook</a>
+        </div>
+    </ion-content>
+</ion-view>

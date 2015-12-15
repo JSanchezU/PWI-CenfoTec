@@ -1,0 +1,20 @@
+<div class="container col-lg-12" ng-controller="HomeController"> 
+	<header class="container">
+		<div class="pull-right">
+			<a href="http://localhost/consultorio/index.html?#/user" class="btn btn-success btn-lg pull-left">{{infoUser[0][0].fullname}}</a>
+            <button type="submit" ng-click="logOut()" class="btn btn-danger btn-lg pull-left">Log Out</button>
+	  	</div>
+	</header>
+
+    <div class="container col-md-6 col-md-offset-3 text-center espacio">
+        <a href="http://localhost/consultorio/index.html#/allContacts" class="btn btn-primary btn-lg col-md-6">Contacts</a>
+        <a href="http://localhost/consultorio/index.html#/allDoctors" class="btn btn-primary btn-lg col-md-6">Dr & Drs</a>
+          
+    </div>
+
+    <div class="container container col-md-6 col-md-offset-3 text-center espacio">
+        <a href="http://localhost/consultorio/index.html#/allAppointmentsByMonth" class="btn btn-primary btn-lg col-md-12">Appointments</a>
+          
+    </div>
+
+</div>

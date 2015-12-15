@@ -1,0 +1,38 @@
+<ion-view view-title="What to Cook?">
+    <ion-content>
+    <br>
+    <br>
+        <center>
+            <h2 style="color:red;"> Enter your ingredients</h2>
+        </center>
+        <form name="ingredientsForm">
+            <center>
+			    <ui-select multiple ng-model="multipleDemo.colors" theme="select2" ng-disabled="disabled" style="width: 300px;">
+			    <ui-select-match placeholder="Select ingredients">{{$item}}</ui-select-match>
+			    <ui-select-choices repeat="color in availableColors | filter:$select.search">
+			      {{color}}
+			    </ui-select-choices>
+			  </ui-select>
+			</center>
+        </form>
+        <center>
+        	<br>
+        	<a class="button button-balanced" href="#/app/recipesList">
+			  Search
+			</a>
+        </center>
+        <br>
+        <!--
+        <div class="row">
+		  <div class="col col-25"></div>
+		  <div class="col col-50">
+		  	<p>
+		  	<center><h4>Selected:</h4></center> 
+		  	{{multipleDemo.colors}}
+			</p>
+		  </div>
+		  <div class="col col-25"></div>
+		</div>-->
+        
+    </ion-content>
+</ion-view>

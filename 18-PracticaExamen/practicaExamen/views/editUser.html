@@ -1,0 +1,114 @@
+<div class="container col-lg-12" ng-controller="EditUserController">  
+
+    <div class="container col-lg-12">
+        
+        <h2>Editing Profile</h2> 
+        <br>
+         <form class="col-lg-12" id="form-user" name="contactForm" ng-submit="submitForm(contact.$valid)">
+
+        <fieldset>
+        <div class="form-horizontal well bs-component col-lg-6">
+
+            <div class="form-group">
+                <label for="input-name" class="col-lg-3 control-label">Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.name" id="input-name" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-lastname" class="col-lg-3 control-label"> Last Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.lastname" id="input-lastname" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-photo" class="col-lg-3 control-label">Photo Link</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.photo" id="input-photo" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-fullname" class="col-lg-3 control-label">full name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.fullname" id="input-fullname" >
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="input-country" class="col-lg-3 control-label">Country</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.country" id="input-country" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-state" class="col-lg-3 control-label">State</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.state" id="input-state" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-city" class="col-lg-3 control-label">City</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.city" id="input-city" >
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-6">
+
+            
+
+            <div class="form-group">
+                <label for="input-billingAddress1" class="col-lg-3 control-label">Address</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.billingAddress1" id="input-billingAddress1" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-zipcode" class="col-lg-3 control-label">zip Code</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.zipcode" id="input-zipcode" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-zipcodeExt" class="col-lg-3 control-label">zip CodeExt</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.zipcodeExt" id="input-zipcodeExt" > 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-billingAddress2" class="col-lg-3 control-label">Address 2</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idUsers.billingAddress2" id="input-billingAddress2">
+                </div>
+            </div>
+
+          <hr>
+
+          <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-3">
+              <button class="btn btn-default col-lg-5 col-lg-offset-1" ng-click="updateUser(idUsers)" type="update" id="upDate-user">Edit</button>
+              <a class="btn btn-default col-lg-5 col-lg-offset-1" href="http://localhost/consultorio/index.html?#/user" id="cancel-idContacts">Cancelar</a>
+            </div>
+          </div>
+            
+        </div>
+
+        
+        </fieldset>
+      </form>
+      <span>{{idUsers}}</span>
+
+    </div>
+
+</div>

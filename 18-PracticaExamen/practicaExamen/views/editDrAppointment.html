@@ -1,0 +1,89 @@
+<div class="container col-lg-12" ng-controller="EditAppointmentController">  
+
+    <div class="container col-lg-12">
+        
+        <h2>Editing Appointment</h2> 
+        <span>{{appointment}}</span>
+        <br>
+         <form class="col-lg-12" id="form-appointment" ng-submit="newPost()">
+
+        <fieldset>
+        <div class="form-horizontal well bs-component col-lg-5">
+
+            <div class="form-group">
+                <label for="input-date" class="col-lg-3 control-label">Date</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="appointment.date" id="input-date">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-hour" class="col-lg-3 control-label">Hour</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="appointment.hour" id="input-hour">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-accountName" class="col-lg-3 control-label">Appointment Type</label>
+                <div class="col-lg-9">
+                  <select ng-options="listTypeAppointment.value as listTypeAppointment.name for listTypeAppointment in listTypeAppointments | filter:query.value" ng-model="appointment.appointment_type" theme="bootstrap" class="form-control">
+                        <option value="" name="---Appointment Type---">---Appointment Type---</option>
+                    </select> 
+                </div>
+             
+            </div>
+
+            <div class="form-group">
+                <label for="input-hour" class="col-lg-3 control-label">Status</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="appointment.status" id="input-hour">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-offset-1 col-lg-5">
+
+          
+
+            <div class="form-group">
+                <label for="input-reminder-first" class="col-lg-3 control-label">First Reminder</label>
+                <div class="col-lg-9">
+                  <select ng-options="typeslistReminder.value as typeslistReminder.name for typeslistReminder in typeslistReminders | filter:query.value" ng-model="appointment.reminder_first" theme="bootstrap" class="form-control">
+                        <option value="" name="---First Reminder---">---First Reminder---</option>
+                    </select> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-reminder-second" class="col-lg-3 control-label">Second Reminder</label>
+                <div class="col-lg-9">
+                  <select ng-options="typeslistReminder.value as typeslistReminder.name for typeslistReminder in typeslistReminders | filter:query.value" ng-model="appointment.reminder_second" theme="bootstrap" class="form-control">
+                        <option value="" name="---Second Reminder---">---Second Reminder---</option>
+                    </select> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-dataJson" class="col-lg-3 control-label">json-data</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="appointment.dataJson" value=" " id="input-dataJson" >
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-offset-1 col-lg-8">
+          <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-3">
+              <button class="btn btn-default col-lg-5 col-lg-offset-1" ng-click="updateContact(appointment)" type="update" id="submit-contact">Edit</button>
+              <a class="btn btn-default col-lg-5 col-lg-offset-1" href="http://localhost/consultorio/index.html#/allDoctors" id="cancel-idContacts">Cancelar</a>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+
+      </form>
+    </div>
+
+</div>

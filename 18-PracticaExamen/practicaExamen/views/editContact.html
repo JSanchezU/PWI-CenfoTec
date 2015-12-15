@@ -1,0 +1,185 @@
+<div class="container col-lg-12" ng-controller="EditContactController">  
+
+    <div class="container col-lg-12">
+        
+        <h2>Editing Contact</h2> 
+        <br>
+         <form class="col-lg-12" id="form-user" name="contactForm" ng-submit="submitForm(contact.$valid)">
+
+        <fieldset>
+        <div class="form-horizontal well bs-component col-lg-4">
+          <!--<div class="form-group">
+              <label for="input-accountId" class="col-lg-3 control-label">Account Id</label>
+              <div class="col-lg-9">
+                <input type="text" class="form-control" ng-model="idContacts.id" id="input-accountId" required>
+              </div>
+          </div>-->
+
+          <div class="form-group">
+                <label for="select-type" class="col-lg-3 control-label">Account Type</label>
+                <div class="col-lg-9">
+                  <select ng-options="listTypeContact.value as listTypeContact.name for listTypeContact in listTypeContacts | filter:query.value" ng-model="idContacts.account_type" theme="bootstrap" class="form-control" required>
+                        <option value="" name="---Account Type---">---Account Type---</option>
+                    </select> 
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="input-name" class="col-lg-3 control-label">First Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.firstname" id="input-name" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-lastName" class="col-lg-3 control-label"> Last Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.lastname" id="input-lastName" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-surName" class="col-lg-3 control-label">Sur Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.surname2" id="input-surName" >
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label for="input-cedula" class="col-lg-3 control-label">ID Card</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.cedula" id="input-cedula" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-salutation" class="col-lg-3 control-label">Salutation</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.salutation" id="input-salutation" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-birthDate" class="col-lg-3 control-label">BirthDate</label>
+                <div class="col-lg-9">
+
+                  <input type="text" class="form-control" ng-model="idContacts.detail.birthdate" id="input-birthDate"  >
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-4">
+
+            <div class="form-group">
+                <label for="input-photo" class="col-lg-3 control-label">Photo Link</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.photo" id="input-photo" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-country" class="col-lg-3 control-label">Country</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.country" id="input-country" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-state" class="col-lg-3 control-label">State</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.state" id="input-state" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-city" class="col-lg-3 control-label">City</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.city" id="input-city" > 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-email" class="col-lg-3 control-label">Email</label>
+                <div class="col-lg-9">
+                  <input type="email" class="form-control" ng-model="idContacts.detail.email" id="input-email" placeholder="your.name@gmail.com" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-phoneMobile" class="col-lg-3 control-label">Phone Mobile</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.phone_mobile" id="input-phoneMobile" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-phoneWork" class="col-lg-3 control-label">Phone Work</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.phone_work" id="input-phoneWork" >
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-4">
+            <div class="form-group">
+                <label for="input-phoneHome" class="col-lg-3 control-label">Phone Home</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.phone_home" id="input-phoneHome" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-phoneFax" class="col-lg-3 control-label">Phone Fax</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.phone_fax" id="input-phoneFax" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-phoneOther" class="col-lg-3 control-label">Phone Other</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.phone_other" id="input-phoneOther" >
+                </div>
+            </div>.detail
+
+            <div class="form-group">
+                <label for="input-assistant" class="col-lg-3 control-label">Assistant</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.assistant" id="input-assistant" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-assistantPhone" class="col-lg-3 control-label">Assistant Phone</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.assistant_phone" id="input-assistantPhone" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="input-parla" class="col-lg-3 control-label">Parla</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="idContacts.detail.parla" id="input-parla" >
+                </div>
+            </div>
+            
+          <hr>
+
+          <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-3">
+              <button class="btn btn-default col-lg-5 col-lg-offset-1" ng-click="updateContact(idContacts)" type="update" id="submit-contact">Edit</button>
+              <a class="btn btn-default col-lg-5 col-lg-offset-1" href="http://localhost/consultorio/index.html#/allContacts" id="cancel-idContacts">Cancelar</a>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+      </form>
+      <span>{{idContacts}}</span>
+
+    </div>
+
+</div>

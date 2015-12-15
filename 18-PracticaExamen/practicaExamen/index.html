@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset ="utf-8">
+		<title>Agenda</title>
+        <link href="css/bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/font-awesome-4.3.0/css/font-awesome.css" rel="stylesheet"/>
+        <link href="css/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+        <link href="css/calendar.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
+
+
+	</head>
+	<body ng-app="AgendaApp" >
+		<header class="container col-lg-12 text-center bg-primary">
+			<h1 class="big" >Agenda</h1>
+		</header>
+		<main class="container col-lg-10 col-lg-offset-1 ">
+			<br>
+	
+			<section id="mainContainer">
+	            <div ng-view></div>
+	        </section>
+
+   		</main>
+
+        
+        <!-- Lbrary -->
+		<script type="text/javascript" src="js/util/angular.min.js"></script>
+		<script type="text/javascript" src="js/util/angular-route.js"></script>
+		<script type="text/javascript" src="js/util/ngStorage.min.js"></script>
+		<script type="text/javascript" src="js/util/cookies.js"></script>
+		<script type="text/javascript" src="js/util/angular-cookies.min.js"></script>
+        <script type="text/javascript" src="js/util/moment.js"></script>
+
+
+        <!-- Modules -->
+        <script src="js/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/controller/LoginController.js"></script>
+        <script src="js/controller/HomeController.js"></script>
+
+        <script src="js/controller/AllUsersController.js"></script>
+        <script src="js/controller/NewUserController.js"></script>
+        <script src="js/controller/UserDetailController.js"></script>
+        <script src="js/controller/EditUserController.js"></script>
+
+        <script src="js/controller/AllContactsController.js"></script>
+        <script src="js/controller/NewContactController.js"></script>
+        <script src="js/controller/ContactDetailController.js"></script>
+        <script src="js/controller/EditContactController.js"></script>
+
+        <script src="js/controller/AllAppointmentsByMonthController.js"></script>
+        <script src="js/controller/AllAppointmentsByDayController.js"></script>
+        <script src="js/controller/NewAppointmentController.js"></script>
+        <script src="js/controller/AppointmentDetailController.js"></script>
+        <script src="js/controller/AllAppointmentsByIdController.js"></script>
+        <script src="js/controller/EditAppointmentController.js"></script>
+        
+        <!-- Directives -->
+        <script src="js/directive/CalendarDirective.js"></script>
+
+        <!-- Services -->
+    	<script src="js/services/AgendaServices.js"></script>
+         
+	</body>
+</html>

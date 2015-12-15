@@ -1,0 +1,214 @@
+<div class="container col-lg-12" ng-controller="NewContactController">  
+
+    <div class="container col-lg-12">
+        
+        <h2>New Contact</h2>
+        <br>
+
+        <div class="bg-warning .col-md-6 .col-md-offset-3" ng-if="message != ' ' "> {{message}} </div>
+
+         <form class="col-lg-12" id="form-contact" name="contactForm" >
+
+        <fieldset>
+        <div class="form-horizontal well bs-component col-lg-4 ">
+
+<!-- Inicio account type -->
+          <div class="form-group">
+                <label for="select-type" class="col-lg-3 control-label">Account Type</label>
+                <div class="col-lg-9">
+                  <select ng-options="listTypeContact.value as listTypeContact.name for listTypeContact in listTypeContacts | filter:query.value" ng-model="contact.account_type" theme="bootstrap" class="form-control" required>
+                    <option value="" name="---Account Type---">---Account Type---</option>
+                  </select> 
+                </div> 
+            </div>
+<!-- Fin account type -->
+
+<!-- Inicio firstname -->
+            <div class="form-group">
+                <label for="input-name" class="col-lg-3 control-label">First Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.firstname" id="input-name" required>
+                </div>
+            </div>
+<!-- Fin firstname -->
+
+<!-- Inicio lastname -->
+            <div class="form-group">
+                <label for="input-lastName" class="col-lg-3 control-label"> Last Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.lastname" id="input-lastName" required>
+                </div>
+            </div>
+<!-- Fin lastname -->
+
+<!-- Inicio surname2 -->
+            <div class="form-group">
+                <label for="input-surName" class="col-lg-3 control-label">Sur Name</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.surname2" id="input-surName" required>
+                </div>
+            </div>
+<!-- Fin surname2 -->
+
+<!-- Inicio cedula -->
+            <div class="form-group">
+                <label for="input-cedula" class="col-lg-3 control-label">ID Card</label>
+                <div class="col-lg-9">
+                  <input type="number" max="9" class="form-control" ng-model="contact.cedula" id="input-cedula" required>
+                </div>
+            </div>
+<!-- Fin cedula -->
+
+<!-- Inicio salutation -->
+            <div class="form-group">
+                <label for="input-salutation" class="col-lg-3 control-label">Salutation</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.salutation" id="input-salutation" >
+                </div>
+            </div>
+<!-- Fin salutation -->
+
+<!-- Inicio BirthDate -->
+            <div class="form-group">
+                <label for="input-birthDate" class="col-lg-3 control-label">BirthDate</label>
+                <div class="col-lg-9">
+                  <input type="text" pattern="\d{4}\d{1,2}/\d{1,2}" class="form-control" ng-model="contact.birthdate" id="input-birthDate" placeholder="2000-02-29" required>
+                </div>
+            </div>
+<!-- Fin BirthDate -->
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-4">
+<!-- Inicio photo -->
+            <div class="form-group">
+                <label for="input-photo" class="col-lg-3 control-label">Photo Link</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.photo" id="input-photo" required>
+                </div>
+            </div>
+<!-- Fin photo -->
+
+<!-- Inicio Country -->
+            <div class="form-group">
+                <label for="input-country" class="col-lg-3 control-label">Country</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.country" id="input-country" required>
+                </div>
+            </div>
+<!-- Fin Country -->
+
+<!-- Inicio State -->
+            <div class="form-group">
+                <label for="input-state" class="col-lg-3 control-label">State</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.state" id="input-state" required>
+                </div>
+            </div>
+<!-- Fin State -->
+
+<!-- Inicio City -->
+            <div class="form-group">
+                <label for="input-city" class="col-lg-3 control-label">City</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.city" id="input-city" required> 
+                </div>
+            </div>
+<!-- Fin City -->
+
+<!-- Inicio Email -->
+            <div class="form-group">
+                <label for="input-email" class="col-lg-3 control-label">Email</label>
+                <div class="col-lg-9">
+                  <input type="email" class="form-control" ng-model="contact.email" id="input-email" placeholder="your.name@gmail.com" required>
+                </div>
+            </div>
+<!-- Fin Email -->
+
+<!-- Inicio phoneMobile -->
+            <div class="form-group">
+                <label for="input-phoneMobile" class="col-lg-3 control-label">Phone Mobile</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.phoneMobile" id="input-phoneMobile" required>
+                </div>
+            </div>
+<!-- Fin phoneMobile -->
+
+<!-- Inicio phoneWork -->
+            <div class="form-group">
+                <label for="input-phoneWork" class="col-lg-3 control-label">Phone Work</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.phoneWork" id="input-phoneWork" required>
+                </div>
+            </div>
+<!-- Fin phoneWork -->
+        </div>
+
+        <div class="form-horizontal well bs-component col-lg-4">
+<!-- Inicio phoneHome -->
+            <div class="form-group">
+                <label for="input-phoneHome" class="col-lg-3 control-label">Phone Home</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.phoneHome" id="input-phoneHome" required>
+                </div>
+            </div>
+<!-- Fin phoneHome -->
+
+<!-- Inicio phoneFax -->
+            <div class="form-group">
+                <label for="input-phoneFax" class="col-lg-3 control-label">Phone Fax</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.phoneFax" id="input-phoneFax" required>
+                </div>
+            </div>
+<!-- Fin phoneFax -->
+
+<!-- Inicio phoneOther -->
+            <div class="form-group">
+                <label for="input-phoneOther" class="col-lg-3 control-label">Phone Other</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.phoneOther" id="input-phoneOther" required>
+                </div>
+            </div>
+<!-- Fin phoneOther -->
+
+<!-- Inicio assistant -->
+            <div class="form-group">
+                <label for="input-assistant" class="col-lg-3 control-label">Assistant</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.assistant" id="input-assistant" required>
+                </div>
+            </div>
+<!-- Fin assistant -->
+
+<!-- Inicio assistantPhone -->
+            <div class="form-group">
+                <label for="input-assistantPhone" class="col-lg-3 control-label">Assistant Phone</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.assistantPhone" id="input-assistantPhone" required>
+                </div>
+            </div>
+<!-- Fin assistantPhone -->
+
+<!-- Inicio Email -->
+            <div class="form-group">
+                <label for="input-parla" class="col-lg-3 control-label">Parla</label>
+                <div class="col-lg-9">
+                  <input type="text" class="form-control" ng-model="contact.parla" id="input-parla" required>
+                </div>
+            </div>
+<!-- Fin Email -->            
+          <hr>
+
+          <div class="form-group">
+            <div class="col-lg-9 col-lg-offset-3">
+              <button class="btn btn-default col-lg-5 col-lg-offset-1" ng-click="saveContact(contact)" type="submit" id="submit-contact">Crear</button>
+              <a class="btn btn-default col-lg-5 col-lg-offset-1" href="http://localhost/consultorio/index.html#/allContacts" id="cancel-contact">Cancelar</a>
+            </div>
+          </div>
+        </div>
+        </fieldset>
+      </form>
+
+    </div>
+
+</div>
