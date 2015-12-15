@@ -1,0 +1,43 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="pwi-button.html">
+
+<dom-module id="pwi-image">
+	<template>
+		<style>
+			#polymerBtn {
+				padding-left: 250px;
+			}
+			#polymerImg {
+				display: none;
+				width: 400px;
+				height: 300px;
+				padding-left: 60px;				
+			}
+
+		</style>
+		<div class="form-group">
+			<input type="text" class="form-control" placeholder="http://" id="imgsrc">
+		</div>
+		<div class="row">
+			<img id="polymerImg" src="">
+			<pwi-button id="polymerBtn"></pwi-button>
+		</div>
+	</template>
+
+	<script>
+		Polymer({
+			is: 'pwi-image',
+
+			listeners: {
+		        'polymerBtn.click' : 'showImage',
+		    },
+
+		    showImage: function(e){
+		        var newSrc = $("#imgsrc").val();
+
+		       	$("#polymerImg").show();
+				$("#polymerImg").attr("src", newSrc);
+	   		}
+		});
+	</script>
+</dom-module>

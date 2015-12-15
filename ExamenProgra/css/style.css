@@ -1,0 +1,24 @@
+body{
+	margin: 0;
+}
+header{
+	background-color: #4b4b4b;
+	height: 100px;
+	
+}
+.titleHeader{
+	margin-left: 25px;
+	font-size: 28px;
+	color: #FFF;
+	line-height: 33px;
+}
+
+.headerPolymer{
+	width: 415px;
+	height: 50px;
+}
+
+.bodyPolymer{
+	width: 415px;
+	height: 50px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "ExamenProgra",
+  "version": "0.0.0",
+  "authors": [
+    "Javierimperial <javiersanchezugalde@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#~1.4.7",
+    "firebase": "~2.3.1",
+    "bootstrap": "~3.3.5",
+    "polymer": "Polymer/polymer#~1.2.3",
+    "angularfire": "~1.1.3"
+  }
+}

@@ -1,0 +1,15 @@
+<div class="headerPolymer"></div>
+<div class="bodyPolymer" ng-controller="chatController">
+    <div class="form-group">
+      <input type="text" placeholder="Enter your name!" class="form-control" ng-model="new.name">
+      <textarea type="text" placeholder="Enter your message!" class="form-control" ng-model="new.text"></textarea>
+    </div>
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="message in messages">
+          {{message.name}}: {{message.text}}
+        </li>
+      </ul>
+    </div>
+    <div class="chatbtn col-md-2"><pwi-button ng-click="send(new)"></pwi-button></div>
+</div>
