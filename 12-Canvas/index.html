@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SVG</title>
+  </head>
+  <body>
+    <canvas id="mycanvas" width="300" height="300">
+      no canvas
+    </canvas>
+
+    <script type="text/javascript">
+      var canvas = document.getElementById('mycanvas');
+      var context = canvas.getContext('2d');
+
+      context.fillStyle = "green";
+      context.fillRect(10,10,100,100);
+    </script>
+  </body>
+</html>
