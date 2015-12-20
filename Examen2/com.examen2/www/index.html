@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- lib js 
+    <script src="lib/ngstorage/ngStorage.min.js"></script>-->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="HomeCtrl">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+      <div class="bar bar-header bar-stable">
+  <h1 class="title"></h1>
+</div>
+      <div class="bar bar-header bar-stable">
+        <h1 class="title">PWI Examen 2</h1>
+      </div>
+      </ion-header-bar>
+      <ion-content>
+      <br>
+      <br>
+        <div class="card">
+          <div class="item item-text-wrap">
+            <div class="col">
+              <img class="full-image" ng-src="{{currImg}}" src="img/120x120.jpg">
+            </div>
+            <div class="col textRight">
+                <button ng-click="takePhoto()" class="button button-icon icon ion-camera"></button>
+                <button ng-click="takeVideo()" class="button button-icon icon ion-videocamera"></button>
+              </div>
+            <br>
+            <div class="col">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <div class="col textRight">
+                <button class="button button-icon icon ion-checkmark-round balanced" ng-click="save()"></button>
+              </div>
+          </div>
+        </div>
+
+        <div class="list">
+
+        <a ng-repeat="item in items" 
+           href="#"
+           class="item item-thumbnail-left">
+
+          <img ng-src="{{ item.img }}">
+          <h2>{{ item.name }}</h2>
+          <h4>{{ item.info }}</h4>
+        </a>
+      </div>
+
+      <div class="list">
+
+        <a href="#"
+           class="item item-thumbnail-left">
+
+          <img ng-src="{{ prueba.img }}">
+          <h2>{{ prueba.name }}</h2>
+          <h4>{{ prueba.info }}</h4>
+        </a>
+        <a href="#"
+           class="item item-thumbnail-left">
+
+          <img ng-src="{{ prueba.img }}">
+          <h2>{{ prueba.name }}</h2>
+          <h4>{{ prueba.info }}</h4>
+        </a>
+      </div>
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
